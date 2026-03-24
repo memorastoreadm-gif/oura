@@ -32,7 +32,7 @@ CREDENCIALES_PATH = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', 'credencial
 creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENCIALES_PATH, scope)
 client_gs = gspread.authorize(creds)
 
-sheet = client_gs.open("Registro_Habitos").sheet1 
+sheet = client_gs.open_by_key("1B7z5USzpV9RgQdEiBJWth2pyw7S_nV7RG3cEzjB_C5E").sheet1
 
 # Carpetas temporales
 AUDIO_DIR = "audios_recibidos"
